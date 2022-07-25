@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app class="main">
+    <v-main>
+       <v-container>
+           <!-- <VVFormValidate /> -->
+           <!-- <FormValidations />
+           <VueFormValidations /> -->
+           <router-view></router-view>
+       </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import FormValidations from './components/FormValidations.vue';
+// import VueFormValidations from './components/VueFormValidations.vue';
+// import VVFormValidate from './components/VVFormValidate.vue';
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
-}
+    // FormValidations,
+    // VueFormValidations,
+    // VVFormValidate
+},
+
+  data: () => ({
+    //
+  }),
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+  .main{
+      background-color:white;
+   }
+
+
+
 </style>
